@@ -1,0 +1,45 @@
+= Típushelyes cachelés, most akár 7000%-kal gyorsabban.
+:cxx: C++
+
+Ez a repo tartalmazza a 2022-es KSZK-s konferencián bemutatott előadásomat.
+
+A különböző visitorok, amik bemutatásra kerültek az előadáson az megtalálható itt, míg maga a házim elérhető https://github.com/bodand/confy:[itt].
+
+== Struktúra
+
+Egyetlen különálló mappa a `user-code`. 
+Ez tartalmazza a felhasználói kódot, amelyikben a látogatásra váró hierarchia implementálva van.
+Illetve a konkrét visitor meghívását is ez tartalmazza.
+
+Utána a három implementációs mappa: `dynamic_cast`, `type_info`, `custom`.
+Ezek tartalmazzák azokat a fejléceket, amelyek a nevüknek megfelelő implementációt tartalmazzák a dinamikus visitorhoz.
+Mivel a kliens kódfelé biztosított API-juk ugyan az, így nem kell külön klienseket írni hozzájuk, a `user-code` mappabeli fájlok fel tudják használni mindet.
+
+Elméletileg minden kódot sikerült érthetően (bár angolul) dokumentálnom, de ha valami nem egyértelmű akár a bodand@kszi2.hu emailcímen, akár GitHub issuekban tudok válaszlni.
+
+== Build
+
+Aki szeretné, buildelheti, és megnézheti a sebességbeli különbségeket a különböző implemenáticók között.
+Ehhez egy {cxx} fordító és CMake szükséges.
+
+CMake két lépésben működik: konfiguráció és build lépésből áll.
+
+A konfiguációhoz a következő parancs szükséges:
+
+[source,bash]
+----
+cmake -B_build -S.
+----
+
+Ilyenkor létrejön egy _build mappa; ebbe fognak elkészülni a különböző kimeneti fájlok.
+
+Build lépés pedig nagyon egyszerűen: 
+
+[source,bash]
+----
+cmake --build _build
+----
+
+Ez a parancs a "`_build`" mappába konfigurált projektet fogja lebuildelni.
+Ez három futtatható fájlt fog eredményezni: `dynamic_cast`, `type_info`, és `custom` a platformnak megfelelő kiterjesztéssel.
+
