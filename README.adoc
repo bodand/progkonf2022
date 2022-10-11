@@ -3,7 +3,7 @@
 
 Ez a repo tartalmazza a 2022-es KSZK-s konferencián bemutatott előadásomat.
 
-A különböző visitorok, amik bemutatásra kerültek az előadáson az megtalálható itt, míg maga a házim elérhető https://github.com/bodand/confy:[itt].
+A különböző visitorok, amik bemutatásra kerültek az előadáson az megtalálható itt, míg maga a házim elérhető https://github.com/bodand/confy[itt].
 
 == Struktúra
 
