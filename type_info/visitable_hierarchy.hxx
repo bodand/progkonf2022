@@ -14,24 +14,29 @@
  * OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  * PERFORMANCE OF THIS SOFTWARE.
  *
- * user-code/base.hxx --
- *   User code for using the dynamic visitor implementation, contains the base
- *   class of the user class-hierarchy.
+ * type_info/visitable_hierarchy.hxx --
+ *   The library code for the `visitable_hierarchy` class.
+ *   Equivalent implementation in all three variants.
  */
 
-#ifndef USER_CODE_BASE_HXX
-#define USER_CODE_BASE_HXX
+#ifndef STD_VISITABLE_HIERARCHY_HXX
+#define STD_VISITABLE_HIERARCHY_HXX
 
-#include <visitable_hierarchy.hxx>
+#include "visitor_base.hxx"
 
-struct base : visitable_hierarchy {
-    explicit base(int x)
-        : _x(x) { }
-
-private:
-    int _x;
-    // Dummy value, so a compiler doesn't accidentally do
-    // "empty base-class optimization"
+/**
+ * Denotes a hierarchy that may be visited by the visitors deriving from
+ * visitor_base.
+ **/
+struct visitable_hierarchy {
+    /**
+     * Entry point for the visitor to start visiting.
+     * Calls back into the correct descendant's do_visit with the correct type.
+     **/
+    virtual void accept(visitor_base& vis) = 0;
+    // virtual destructor, because inheritance
+    virtual ~visitable_hierarchy() = default;
 };
 
 #endif
+

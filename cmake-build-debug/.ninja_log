@@ -1,0 +1,8 @@
+# ninja log v5
+2	203	6872234355450268	build.ninja	d1682f86dd7e1828
+824	958	6872208381197484	dynamic_cast.exe	5f538bf02fefe5e5
+737	869	6872208461402200	type_info.exe	f256af57e22ac5a6
+5	823	6872208379880290	CMakeFiles/dynamic_cast.dir/user-code/main.cxx.obj	dd1065c7d1e22a28
+5	737	6872208460108679	CMakeFiles/type_info.dir/user-code/main.cxx.obj	2edd1939a91ca6ef
+3	1940	6872234681786444	CMakeFiles/custom.dir/user-code/main.cxx.obj	da8b7149df7f1121
+1940	2412	6872234686472619	custom.exe	dbc9c97483c10ab1

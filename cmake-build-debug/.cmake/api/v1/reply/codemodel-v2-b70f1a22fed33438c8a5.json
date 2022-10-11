@@ -1,0 +1,120 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				},
+				{
+					"build" : "dynamic_cast",
+					"jsonFile" : "directory-dynamic_cast-Debug-821d83dbc8f53126c1b5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "dynamic_cast"
+				},
+				{
+					"build" : "type_info",
+					"jsonFile" : "directory-type_info-Debug-af1d2da74d59b1f4315a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "type_info"
+				},
+				{
+					"build" : "custom",
+					"jsonFile" : "directory-custom-Debug-129b1ab4fa3a003800d8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "custom"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "DynamicVisitor",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "custom::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom-Debug-e934b976620de6eacede.json",
+					"name" : "custom",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dynamic_cast::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dynamic_cast-Debug-60d239571cac2baf201a.json",
+					"name" : "dynamic_cast",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "type_info::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-type_info-Debug-6c08c26c928eb9b0f54d.json",
+					"name" : "type_info",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/.projects/progkonf/cmake-build-debug",
+		"source" : "D:/.projects/progkonf"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

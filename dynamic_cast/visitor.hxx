@@ -14,24 +14,29 @@
  * OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  * PERFORMANCE OF THIS SOFTWARE.
  *
- * user-code/base.hxx --
- *   User code for using the dynamic visitor implementation, contains the base
- *   class of the user class-hierarchy.
+ * dynamic_cast/visitor.hxx --
+ *   Provides the generic visitor class, which merges together multiple sets of
+ *   types that may be visited.
+ *   Basically just a joint set of visitor_impl<T> for unspecified, but finite
+ *   set of types.
  */
 
-#ifndef USER_CODE_BASE_HXX
-#define USER_CODE_BASE_HXX
+#ifndef DYN_VISITOR_HXX
+#define DYN_VISITOR_HXX
 
-#include <visitable_hierarchy.hxx>
+#include "visitor_base.hxx"
 
-struct base : visitable_hierarchy {
-    explicit base(int x)
-        : _x(x) { }
-
-private:
-    int _x;
-    // Dummy value, so a compiler doesn't accidentally do
-    // "empty base-class optimization"
+/**
+ * Visitor class capable of visiting multiple types in a class hierarchy.
+ * The types it may visit are provided in the template parameters, such the
+ * code only needs to know the correct set of types when the type is to be
+ * used.
+ *
+ * \tparam Ts A parameter pack of types to visit.
+ */
+template<class... Ts>
+struct visitor : visitor_impl<Ts> ... {
+    ~visitor() override = default;
 };
 
 #endif

@@ -1,0 +1,4 @@
+C:\Users\tudom\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\222.4345.21\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/msys64/ucrt64/bin/ninja.exe -DCMAKE_C_COMPILER=D:/msys64/ucrt64/bin/gcc.exe -DCMAKE_CXX_COMPILER=D:/msys64/ucrt64/bin/g++.exe -G Ninja -S D:\.projects\progkonf -B D:\.projects\progkonf\cmake-build-debug
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/.projects/progkonf/cmake-build-debug
